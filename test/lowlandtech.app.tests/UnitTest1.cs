@@ -1,7 +1,7 @@
 using System;
 using Xunit;
 
-namespace LowlandTech.Tests
+namespace LowlandTech.App.Tests
 {
     public class UnitTest1
     {
