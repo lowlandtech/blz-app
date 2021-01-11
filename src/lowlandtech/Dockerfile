@@ -1,22 +1,22 @@
 # Here, we include the dotnet core SDK as the base to build our app
 FROM mcr.microsoft.com/dotnet/sdk:5.0 AS build-env
 # Setting the work directory for our app
-WORKDIR /lowlandtech.app
+WORKDIR /lowlandtech
 
 # We copy the .csproj of our app to root and 
 # restore the dependencies of the project.
-COPY LowlandTech.App.csproj .
-RUN dotnet restore LowlandTech.App.csproj
+COPY LowlandTech.csproj .
+RUN dotnet restore LowlandTech.csproj
 
 # We proceed by copying all the contents in
 # the main project folder to root and build it
 COPY . .
-RUN dotnet build LowlandTech.App.csproj -c Release -o /build
+RUN dotnet build LowlandTech.csproj -c Release -o /build
 
 # Once we're done building, we'll publish the project
 # to the publish folder 
 FROM build-env AS publish
-RUN dotnet publish LowlandTech.App.csproj -c Release -o /publish
+RUN dotnet publish LowlandTech.csproj -c Release -o /publish
 
 # We then get the base image for Nginx and set the 
 # work directory 
