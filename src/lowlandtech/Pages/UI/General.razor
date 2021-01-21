@@ -1,0 +1,40 @@
+﻿@page "/ui/general"
+<ContentHeader>
+    <Header>
+        <PageTitle Title="General UI Elements" />
+    </Header>
+</ContentHeader>
+<ContentMain>
+    <Row>
+        <Column Classes="col.md._6">
+            <Card HeaderBackgroundColor="Color.Primary">
+                <Title><CardTitle>Carousel</CardTitle></Title>
+                <Body>
+                    <Carousel Items="items" Identifier="blabla" />
+                </Body>
+            </Card>
+        </Column>
+        <Column Classes="col.md._6">
+            <Card HeaderBackgroundColor="Color.Primary">
+                <Title><CardTitle>Carousel</CardTitle></Title>
+                <Body>
+                    <Carousel Items="items1" LinkTarget="_blank" Identifier="blabla2" />
+                </Body>
+            </Card>
+        </Column>
+    </Row>
+</ContentMain>
+@code {
+    private CarouselItemCollection items = new CarouselItemCollection()
+        {
+        new CarouselItem(){Image="https://placehold.it/900x500/39CCCC/ffffff&text=I+Love+Bootstrap",Alt="First slide",Link="/starter-pages/active-page?slide=1"},
+        new CarouselItem(){Image="https://placehold.it/900x500/3c8dbc/ffffff&text=I+Love+Bootstrap",Alt="Second slide"},
+        new CarouselItem(){Image="https://placehold.it/900x500/f39c12/ffffff&text=I+Love+Bootstrap",Alt="Third slide",Link="/starter-pages/active-page?slide=3"},
+    };
+    private CarouselItemCollection items1 = new CarouselItemCollection()
+        {
+        new CarouselItem(){Image="https://placehold.it/900x500/2c8dbc/ffffff&text=I+Love+Bootstrap",Alt="First slide",Link="/starter-pages/active-page?slide=1"},
+        new CarouselItem(){Image="https://placehold.it/900x500/19CCCC/ffffff&text=I+Love+Bootstrap",Alt="Second slide"},
+        new CarouselItem(){Image="https://placehold.it/900x500/339c12/ffffff&text=I+Love+Bootstrap",Alt="Third slide",Link="/starter-pages/active-page?slide=3"},
+    };
+}

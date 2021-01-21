@@ -1,7 +1,9 @@
-﻿@page "/"
+﻿@page "/injections/navbar-left"
+@inject NavBarLeftInjectableMenu menu
+@menu.SetContent(@<NavBarLeftMenu />)
 <ContentHeader>
     <Header>
-        <PageTitle Title="Index" />
+        <PageTitle Title="NavBar Left" />
     </Header>
 </ContentHeader>
 <ContentMain>

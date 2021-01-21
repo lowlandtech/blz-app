@@ -1,7 +1,9 @@
-﻿@page "/"
+﻿@page "/injections/navbar-left-override"
+@inject NavBarLeftInjectableMenu menu
+@menu.SetContent(@<NavBarLeftMenu />,true)
 <ContentHeader>
     <Header>
-        <PageTitle Title="Index" />
+        <PageTitle Title="Navbar Left Override" />
     </Header>
 </ContentHeader>
 <ContentMain>
