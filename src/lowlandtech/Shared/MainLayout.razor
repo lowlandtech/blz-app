@@ -8,7 +8,7 @@
         @if (!navBarLeftInjectableMenu.OverrideParentContent)
         {
             <NavBarMenuItem Link="/">Home</NavBarMenuItem>
-            <NavBarMenuItem OnClick="HandleContent">Content</NavBarMenuItem><!-- defaults to # -->
+            <NavBarMenuItem Link="/search">Search</NavBarMenuItem><!-- defaults to # -->
         }
         @navBarLeftInjectableMenu.content <!-- Injectable for custom menu content per page -->
     </NavBarLeft>
@@ -72,10 +72,10 @@
     </NavBarRight>
 </NavBar>
 <SideBarContainer>
-    <BrandLogo Link="https://lowlandtech.com/" Logo="dist/img/AdminLTELogo.png">AdminLTE 3</BrandLogo>
+    <BrandLogo Link="https://lowlandtech.com/" Logo="dist/img/AdminLTELogo.png">LowlandTech</BrandLogo>
     <SideBar>
         <!-- Sidebar user panel (optional) -->
-        <SideBarUserPanel ImageEffect="ImageEffect.Circle" Link="starter-pages/user-page" Elevation="Elevation.Three" UserImage="dist/img/user2-160x160.jpg">Alexander Pierce</SideBarUserPanel>
+        <SideBarUserPanel ImageEffect="ImageEffect.Circle" Link="starter-pages/user-page" Elevation="Elevation.Three" UserImage="dist/img/user2-160x160.jpg">Wendell Muntslag</SideBarUserPanel>
         @*<SideBarSearch></SideBarSearch>*@
         <SideBarMenu>
             <SideBarMenuItem Link="" Icon="fas fa-th">
